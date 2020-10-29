@@ -11,14 +11,6 @@ var playerMoney = 10;
 
 var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 console.log(enemyNames.length);
-for(var i = 0; i < enemyNames.length; i++) {
-    console.log(enemyNames[i]);
-    console.log(i);
-    console.log(enemyNames[i] + " is at " + i + " index");
-    debugger;
-  // call fight function with enemy-robot
-  fight(enemyNames[i]);
-  }
 console.log(enemyNames[0]);
 console.log(enemyNames[1]);
 console.log(enemyNames[2]);
@@ -82,6 +74,8 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
     }
   };
 
-  for(var i = 0; i < enemyNames.length; i++) {
-    fight(enemyNames[i]);
-  }
+  for (var i = 0; i < enemyNames.length; i++) {
+    var pickedEnemyName = enemyNames[i];
+    enemyHealth = 50;
+    fight(pickedEnemyName);
+}
